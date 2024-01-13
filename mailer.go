@@ -72,7 +72,7 @@ func (m Mailer) Send(to, temlateFile string, data interface{}) error {
 
 	msg := mail.NewMessage()
 	msg.SetHeader("To", to)
-	msg.SetHeader("Cc", os.Getenv("Sender"))
+	msg.SetHeader("Cc", os.Getenv("Cc"))
 	msg.SetHeader("Subject", subject.String())
 	msg.SetHeader("From", m.sender)
 	msg.SetBody("text/plain", plainBody.String())
