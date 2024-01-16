@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	fmt.Println("START")
+	fmt.Println("START!!")
 
 
 	var Port int
@@ -35,6 +35,7 @@ func main() {
 
 	err := sender.Send(to, "welcome.html", nil)
 	if err != nil {
+		fmt.Println("error !!")
 		log.Fatal(err)
 	}
 

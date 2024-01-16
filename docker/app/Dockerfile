@@ -6,7 +6,9 @@ RUN apk update --no-cache
 
 COPY . .
 
-RUN source .env
+# RUN source .env
+# CMD [ "source",".env" ]
+# RUN source .env
 RUN go build -o main cmd/cli/main.go
 
 CMD ["./main"]
